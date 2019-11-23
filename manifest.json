@@ -1,5 +1,5 @@
  {
-    "name": "Supernotes",
+    "name": "Supernotes - Collaborative Notetaking App",
     "description": "The collaborative notetaking app chrome extension - immediately take notes wherever you are.",
     "version": "1.0",
     "icons": {
@@ -8,6 +8,7 @@
       "128": "images/icon128.png" },
     "description": "Supernotes Chrome Extension",
     "permissions": ["storage"],
+    "author": "Supernotes",
     "background": {
       "scripts": ["background.js"],
       "persistent": false
@@ -20,8 +21,17 @@
        },
        "default_title": "Supernotes"
      },
-    "permissions": [
-
-  ],
-    "manifest_version": 2
+    "commands": {
+       "_execute_browser_action": {
+            "suggested_key": {
+              "windows": "Ctrl+Shift+S",
+              "mac": "Command+Shift+S",
+              "chromeos": "Ctrl+Shift+S",
+              "linux": "Ctrl+Shift+S"
+            }
+          }
+     },
+    "permissions": [ ],
+    "manifest_version": 2,
+    "short_name": "Supernotes"
   }
